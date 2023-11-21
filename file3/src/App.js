@@ -21,8 +21,8 @@ function App() {
       .email()
 
     }),
-    onSubmit:(Redot)=>{
-      console.log(Redot)
+    onSubmit:(Redo)=>{
+      console.log(Redo)
 
     } 
 
