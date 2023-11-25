@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+}
+
+/* body{
+  background-image: linear-gradient(rgba(0,0,0,0.80), rgba(0,0,0,0.80)), url(img/bg.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+.App {
+  text-align: center;
+}
+
+h1{
+  margin-top: 200px;
+  font-size: 30px;
+  font-family: fantasy;
+  margin-bottom: 40px;
+  color: white;
+}
+
+label{
+  font-size: 18px;
+  font-family: fantasy;
+  color:white;
+}
+
+.a{
+  height: 25px;
+  width: 180px;
+  border-radius: 10px;
+  border: 1px solid rgb(2, 14, 19);
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+button{
+  height:35px;
+  width: 70px;
+  font-size: 14px;
+  font-family: fantasy;
+  color: black;
+  background-color:white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+td{
+  width: 100px;
+}
+button{
+  height:35px;
+  width: 70px;
+  font-size: 14px;
+  font-family: fantasy;
+  color: black;
+  background-color:white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top:10px;
+}
+
+button:hover{
+  color: white;
+  background-color:black;
+} */
