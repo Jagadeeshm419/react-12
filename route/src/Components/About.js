@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Table, TableBody, TableCell, TableHeader, TableHeaderCell, TableRow } from 'semantic-ui-react';
+// import { Button, Table, TableBody, TableCell, TableHeader, TableHeaderCell, TableRow, Card } from 'semantic-ui-react';
+import { Button, Card } from 'semantic-ui-react';
 import {useNavigate} from 'react-router-dom'
 import { URL } from './api';
 import axios from 'axios';
@@ -27,7 +28,7 @@ const About = () => {
 
   return (
   <div>  
-    <Table>
+    {/* <Table>
 
       <TableHeader>
         <TableRow>
@@ -41,7 +42,7 @@ const About = () => {
 
       {apiData.map(data => (
         <TableBody>
-        <TableRow>
+        <TableRow key={data.id}>
           <TableCell>{data.firstname}</TableCell>
           <TableCell>{data.lastname}</TableCell>
           <TableCell>{data.check ? 'Active' : 'Inactive'}</TableCell>
@@ -51,7 +52,30 @@ const About = () => {
       </TableBody>
       ))}  
 
-    </Table>
+    </Table> */}
+
+    {apiData.map(data => (
+      <Card>
+      <Card.Content key={data.id}>
+        {/* <Image
+          floated='right'
+          size='mini'
+          src='/images/avatar/large/steve.jpg'
+        /> */}
+        <Card.Header>{data.firstname}</Card.Header>
+        <Card.Meta>{data.lastname}</Card.Meta>
+        <Card.Description>
+          {data.firstname} wants to add you to the group <strong>best friends</strong>
+        </Card.Description>
+      </Card.Content>
+      <Card.Content extra>
+        <div className='ui two buttons'>
+        <Button basic color='blue'><MdEdit /></Button>
+          <Button basic color='red'><BiSolidTrashAlt /></Button>
+        </div>
+      </Card.Content>
+    </Card>
+      ))} 
 
     <button onClick={b}>Back</button>
   </div>
