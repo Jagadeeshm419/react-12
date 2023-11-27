@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Table, TableBody, TableCell, TableHeader, TableHeaderCell, TableRow } from 'semantic-ui-react';
 import {useNavigate} from 'react-router-dom'
+import { URL } from './api';
+import axios from 'axios';
+import { BiSolidTrashAlt } from "react-icons/bi";
+import { MdEdit } from "react-icons/md";
+
 
 const About = () => {
+  const [apiData, setapiData] = useState([])
 
+  const getData = async() => {
+      const fun = await axios.get(URL)
+      setapiData(fun.data)
+    }
+
+    useEffect(()=>{
+      getData();
+    })
+ 
   const a = useNavigate();
 
   const b = ()=>{
@@ -24,16 +39,18 @@ const About = () => {
         </TableRow>
       </TableHeader>
 
-      <TableBody>
+      {apiData.map(data => (
+        <TableBody>
         <TableRow>
-          <TableCell>Jagadeesh</TableCell>
-          <TableCell>M</TableCell>
-          <TableCell>True</TableCell>
-          <TableCell><Button>Edit</Button></TableCell>
-          <TableCell><Button>Remove</Button></TableCell>
+          <TableCell>{data.firstname}</TableCell>
+          <TableCell>{data.lastname}</TableCell>
+          <TableCell>{data.check ? 'Active' : 'Inactive'}</TableCell>
+          <TableCell><Button><MdEdit /></Button></TableCell>
+          <TableCell><Button><BiSolidTrashAlt /></Button></TableCell>
         </TableRow>
       </TableBody>
-      
+      ))}  
+
     </Table>
 
     <button onClick={b}>Back</button>
