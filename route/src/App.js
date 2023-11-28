@@ -1,7 +1,8 @@
 import './App.css';
-import About from './Components/About';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Home from './Components/Home';
+import About from './Components/About';
+import Edit from './Components/Edit';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
      <Routes>
       <Route path='/home'  element={<Home/>} exact />
       <Route path='/about' element={<About />} exact />
+      <Route path='/edit' element={<Edit />} exact />
      </Routes>
      </BrowserRouter>
     </div>
