@@ -20,9 +20,7 @@ const Home = () => {
       lastname,
       check
     })
-
     n('/about')
-
   }
 
   return (
