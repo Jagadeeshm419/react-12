@@ -2,7 +2,6 @@ import './App.css';
 import { Val } from './test';
 import React,{useEffect, useState} from 'react';
 
-
 function App() {
 //useState: 
   const [first, setfirst] = useState('redot')
