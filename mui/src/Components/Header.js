@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AppBar, Tab, Tabs, Toolbar, Typography, Avatar } from '@mui/material'
+import { AppBar, Tab, Tabs, Toolbar, Typography, Avatar, Button } from '@mui/material'
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import { NavLink } from 'react-router-dom'
 
@@ -19,7 +19,8 @@ const Header = () => {
           <Tab LinkComponent={NavLink} to='/about' label='About' />
           <Tab LinkComponent={NavLink} to='/services' label='Services' />
           <Tab LinkComponent={NavLink} to='/contactus' label='Contact Us' />
-          <Avatar sx={{ bgcolor: '#585a66' }}>JD</Avatar> 
+          <Avatar sx={{ bgcolor: '#585a66'}}>JD</Avatar> 
+          <Button variant="contained" sx={{ml:2, backgroundColor:'#585a66'}}>Logout</Button>
         </Tabs>
       </Toolbar>
     </AppBar>
