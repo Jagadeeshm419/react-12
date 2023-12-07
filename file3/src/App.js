@@ -27,7 +27,7 @@ function App() {
 
   })
   return (
-    <div className="App">
+    <>
      <form onSubmit={formik.handleSubmit}>
       <input type = 'text' name='username' value={formik.values.username} onChange={formik.handleChange}/>
       {formik.errors.username}
@@ -35,7 +35,7 @@ function App() {
       {formik.errors.email}
       <button>Submit</button>
      </form>
-    </div>
+    </>
   );
 }
 
